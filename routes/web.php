@@ -49,3 +49,6 @@ Route::get('meet6', function () {
 Route::get('meet7', function () {
     return view('meet7');
 });
+Route::get('perkalian', 'App\Http\Controllers\MahasiswaController@index');
+
+Route::get('biodata', 'App\Http\Controllers\MahasiswaController@biodata');
