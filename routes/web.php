@@ -81,3 +81,14 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+
+//Route Nilai Kuliah
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
+Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiKuliahController@tambah');
+Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
+
+//Route Database Flashdisk
+Route::get('/flashdisk','App\Http\Controllers\FlashdiskController@index');
+Route::get('/flashdisk/tambah','App\Http\Controllers\FlashdiskController@tambah');
+Route::post('/flashdisk/store','App\Http\Controllers\FlashdiskController@store');
