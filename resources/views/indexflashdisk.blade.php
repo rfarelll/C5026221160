@@ -18,6 +18,13 @@
 			<td>{{ $fd->merkflashdisk }}</td>
 			<td>{{ $fd->stockflashdisk }}</td>
 			<td>{{ $fd->tersedia }}</td>
+            <td>
+                <a href="/flashdisk/view/{{ $fd->kodeflashdisk }}" class="btn btn-success">View</a>
+                |
+				<a href="/flashdisk/edit/{{ $fd->kodeflashdisk }}" class="btn btn-warning">Edit</a>
+				|
+				<a href="/flashdisk/hapus/{{ $fd->kodeflashdisk }}" class="btn btn-danger">Hapus</a>
+			</td>
 		</tr>
 		@endforeach
 	</table>

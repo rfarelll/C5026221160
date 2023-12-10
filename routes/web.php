@@ -92,3 +92,13 @@ Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@sto
 Route::get('/flashdisk','App\Http\Controllers\FlashdiskController@index');
 Route::get('/flashdisk/tambah','App\Http\Controllers\FlashdiskController@tambah');
 Route::post('/flashdisk/store','App\Http\Controllers\FlashdiskController@store');
+Route::get('/flashdisk/edit/{kodeflashdisk}','App\Http\Controllers\FlashdiskController@edit');
+Route::post('/flashdisk/update','App\Http\Controllers\FlashdiskController@update');
+Route::get('/flashdisk/hapus/{kodeflashdisk}','App\Http\Controllers\FlashdiskController@hapus');
+Route::get('/flashdisk/view/{kodeflashdisk}','App\Http\Controllers\FlashdiskController@view');
+
+//Route Keranjang Belanja
+Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index');
+Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
+Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
+Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
