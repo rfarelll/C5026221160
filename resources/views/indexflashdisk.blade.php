@@ -5,7 +5,7 @@
 @section('konten')
 	<h3>Database Flashdisk</h3>
 
-	<a href="/flashdisk/tambah" class="btn btn-primary"> + Tambah Data</a>
+	<a href="/flashdisk/tambah" class="btn btn-primary"> + Tambahkan Data</a>
 
 	<table class= "table table-striped table-hover">
 		<tr>
