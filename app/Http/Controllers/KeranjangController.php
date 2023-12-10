@@ -13,7 +13,7 @@ class KeranjangController extends Controller
     	// mengambil data dari table belanja
         $keranjangbelanja = DB::table('keranjangbelanja')->get();
     	// mengirim data belanja ke view index
-		return view('index2',['keranjangbelanja' => $keranjangbelanja]);
+		return view('indexbelanja',['keranjangbelanja' => $keranjangbelanja]);
 
 	}
 
@@ -31,10 +31,10 @@ class KeranjangController extends Controller
 	{
 		// insert data ke table belanja
 		DB::table('keranjangbelanja')->insert([
-			'ID' => $request->ID,
-			'KodeBarang' => $request->KodeBarang,
-			'Jumlah' => $request->Jumlah,
-			'Harga' => $request->Harga
+			'ID' => $request->id,
+			'KodeBarang' => $request->kodebarang,
+			'Jumlah' => $request->jumlah,
+			'Harga' => $request->harga
 		]);
 		// alihkan halaman ke halaman belanja
 		return redirect('/keranjangbelanja');
@@ -42,10 +42,10 @@ class KeranjangController extends Controller
 	}
 
 	// method untuk hapus data belanja
-	public function hapus($ID)
+	public function hapus($id)
 	{
 		// menghapus data belanja berdasarkan id yang dipilih
-		DB::table('keranjangbelanja')->where('ID',$ID)->delete();
+		DB::table('keranjangbelanja')->where('ID',$id)->delete();
 
 		// alihkan halaman ke halaman belanja
 		return redirect('/keranjangbelanja');
