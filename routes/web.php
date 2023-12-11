@@ -102,3 +102,7 @@ Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index')
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
+
+//Route Soal CC
+Route::get('/kategori','App\Http\Controllers\KategoriController@index');
+Route::post('/kategori/hasil', 'App\Http\Controllers\KategoriController@hasil');
